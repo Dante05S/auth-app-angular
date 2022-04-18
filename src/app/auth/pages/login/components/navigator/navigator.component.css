@@ -1,0 +1,70 @@
+.nav
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    align-items: center;
+}
+
+.logo
+{
+  display: flex;
+  margin-right: 20px;
+}
+
+.logo a
+{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #B7228F;
+  font-size: 20px;
+}
+
+.logo a:hover
+{
+  cursor: pointer;
+}
+
+.logo a p
+{
+  font-family: 'Rowdies', sans-serif;
+}
+
+.material-icons
+{
+  margin-right: 5px;
+  font-size: 30px;
+}
+
+.register
+{
+    text-align: center;
+}
+
+.register span
+{
+  margin-right: 10px;
+  color: #555d61;
+  display: none;
+}
+
+.register a
+{
+  color: #1c242b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register a:hover
+{
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px)
+{
+  .register span
+  {
+    display: inline;
+  }
+}

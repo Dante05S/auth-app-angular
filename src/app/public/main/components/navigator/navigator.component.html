@@ -1,0 +1,30 @@
+<header>
+  <nav class="nav">
+      <div class="logo">
+        <a (click)="navigate('/')">
+          <i class="material-icons">account_circle</i>
+          <p>NominasWin</p>
+        </a>
+      </div>
+
+      <button (click)="toggleNav()" class="nav-toggle">
+        <i *ngIf="!flagNav; else elseBlock" class="material-icons">menu</i>
+      <ng-template #elseBlock><i class="material-icons">close</i></ng-template>
+      </button>
+
+      <div class="nav-menu" [ngClass]="{'nav-menu-visible': flagNav}">
+        <ul class="nav-items">
+          <li class="item"><a href="#">Producto</a></li>
+          <li class="item"><a href="#">Soluciones</a></li>
+          <li class="item"><a href="#">Precio</a></li>
+        </ul>
+
+        <div class="container-bottom">
+          <a (click)="navigate('/auth/register')" class="register">Regístrate gratis</a>
+          <a class="login" (click)="navigate('/auth/login')">Acceder</a>
+        </div>
+
+      </div>
+
+  </nav>
+</header>

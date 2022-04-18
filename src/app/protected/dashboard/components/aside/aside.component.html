@@ -1,0 +1,41 @@
+
+  <div class="nav">
+    <button (click)="toggleNav()" class="nav-toggle">
+      <i *ngIf="!flagNav; else elseBlock" class="material-icons">menu</i>
+      <ng-template #elseBlock><i class="material-icons">close</i></ng-template>
+    </button>
+
+    <div class="aside" [ngClass]="{'nav-menu-visible': flagNav}">
+      <div class="logo">
+        <a>
+          <i class="material-icons">account_circle</i>
+          <p>NominasWin</p>
+        </a>
+      </div>
+
+      <div class="nav-menu">
+        <div class="nav-items">
+            <div *ngFor="let menu of menus; let i = index" class="menus">
+              <h4>{{menu.title}}</h4>
+              <ul *ngFor="let item of menu.items; let j = index" class="items">
+                <li>
+                  <a (click)="selectItem([i,j])" [ngClass]="{'select-item': item.select}" class="item">
+                    <i class="material-icons">{{item.icon}}</i>
+                    <p>{{item.title}}</p>
+                    <i class="material-icons arrow">chevron_right</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+
+      <div class="logout">
+        <a (click)="logout()" class="item">
+          <i class="material-icons">logout</i>
+          <p>Cerrar sesión</p>
+        </a>
+      </div>
+
+    </div>
+  </div>

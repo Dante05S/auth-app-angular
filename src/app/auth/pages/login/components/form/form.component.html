@@ -1,0 +1,48 @@
+<div class="login-page">
+  <div class="form-section">
+    <div class="container-title">
+      <h4>INICIAR SESIÓN</h4>
+      <h2>Bienvenido de nuevo</h2>
+      <div class="line"></div>
+    </div>
+
+    <div *ngIf="flagError" class="register-error">
+      <i class="material-icons">error</i>
+      <p>{{msgError}}</p>
+    </div>
+
+    <div class="container-form">
+      <form class="form" [formGroup]="formLogin" (ngSubmit)="send()" errorTailor>
+        <div class="container-inputs">
+          <div class="input">
+            <input required id="email" formControlName="email" type="email" [controlErrorsTpl]="tpl">
+            <label for="email">Email</label>
+            <div *ngIf="formLogin.get('email')?.errors?.['email']">
+              <p class="input-error">Debe ingresar un email valido</p>
+            </div>
+          </div>
+
+          <div class="input">
+            <input required id="password" formControlName="password" type="password" [controlErrorsTpl]="tpl">
+            <label>Contraseña</label>
+          </div>
+
+        </div>
+
+        <div class="container-button">
+          <button type="submit">Iniciar sesión</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="container-register">
+    <a class="register" (click)="navigate('/auth/register')">Regístrate gratis</a>
+  </div>
+</div>
+
+
+  <ng-template let-error let-text="text" #tpl>
+    <p class="input-error">{{text}}</p>
+  </ng-template>

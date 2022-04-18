@@ -1,0 +1,135 @@
+.content
+{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 30px;
+  padding: 15px;
+}
+
+.card
+{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgb(28 36 43 / 8%), 0 4px 8px rgb(28 36 43 / 8%), 0 8px 32px rgb(28 36 43 / 8%);
+}
+
+.welcome
+{
+  color: #1e1e31;
+}
+
+.welcome h3,p
+{
+  margin-bottom: 4px;
+}
+
+.body
+{
+  padding: 48px 32px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.body h3
+{
+  font-size: 27px;
+  font-family: 'Rowdies', sans-serif;
+  font-weight: normal;
+}
+
+.line
+{
+  width: 30px;
+  height: 2px;
+  background-color: #B7228F;
+  margin-top: 20px;
+}
+
+.header
+{
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #e2e2e5;
+  color: #515164;
+}
+
+.c-gray
+{
+  color: #515164
+}
+
+.c-gray p
+{
+  font-size: 14px;
+}
+
+.icon
+{
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.footer
+{
+  width: 100%;
+  border-top: 1px solid #e2e2e5;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn
+{
+  border: none;
+  background: none;
+
+}
+
+.content-btn
+{
+  display: flex;
+  align-items: center;
+  color: #515164
+}
+
+.content-btn p
+{
+  margin: 0;
+  color: #1e1e31;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.content-btn i
+{
+  font-size: 24px;
+  margin-left: 8px;
+}
+
+.btn:hover
+{
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px)
+{
+  .content
+  {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+  }
+
+  .tasks
+  {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+}

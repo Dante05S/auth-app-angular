@@ -1,0 +1,184 @@
+.login-page
+{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.form-section
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.container-title
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.container-title h4
+{
+  font-family: 'Rowdies', sans-serif;
+  font-weight: normal;
+  color: #B7228F;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.container-title h2
+{
+  font-size: 30px;
+  color: #1c242b;
+  margin-bottom: 20px;
+}
+
+.line
+{
+  height: 2px;
+  width: 43px;
+  background-color: #B7228F;
+}
+
+.register-error i
+{
+  position: static;
+  margin-right: 10px;
+  color: #e9e9e9;
+}
+
+.register-error
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dc3545;
+  padding: 20px;
+  border-radius: 7px;
+  color: #e9e9e9;
+  font-size: 15px;
+  text-align: center
+}
+
+.container-form
+{
+  width: 100%;
+  padding: 30px;
+}
+
+.input
+{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input input
+{
+  font-weight: bold;
+  padding: 33px 13px 8px 13px;
+  border: 2px solid #DCDCDC;
+  border-radius: 8px;
+  outline: none;
+  color: #1c242b;
+  transition: border 0.2s ease;
+}
+
+.input input:focus
+{
+  border-color: #B7228F;
+}
+
+.input label
+{
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #7c7c8b;
+  margin-bottom: 10px;
+  transition: color 0.2s ease;
+}
+.input:focus-within label
+{
+  color: #B7228F;
+}
+
+.container-button
+{
+  text-align: center;
+}
+
+.container-button button
+{
+  width: 100%;
+  padding: 18px 40px;
+  border: none;
+  color: #FFFFFF;
+  background:#B7228F;
+  border-radius: 60px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.container-button button:hover
+{
+  cursor: pointer;
+  background:#981775;
+}
+
+.container-register
+{
+  display: flex;
+  margin-top: 50px;
+  padding: 0 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.register
+{
+  width: 100%;
+  text-align: center;
+  border-radius: 60px;
+  padding: 10px;
+  text-decoration: none;
+  color: #1c242b;
+  border: 2px solid #1c242b;
+}
+
+.register:hover
+{
+  background: #e0e0e7;
+  cursor: pointer;
+}
+
+.form input.ng-touched.ng-invalid,
+.form-submitted input.ng-invalid
+{
+  border-color: #dc3545;
+}
+
+.input-error
+{
+  color: #dc3545;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 768px)
+{
+  .form-section, .container-register
+  {
+    width: 50%
+  }
+}
